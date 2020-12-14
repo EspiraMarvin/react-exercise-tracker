@@ -90,6 +90,7 @@ export default class CreateExercises extends Component{
                             // ref={this.setTextInputRef}
                             createref="userInput"
                                 required
+                                id="username"
                                 className="form-control"
                                 value={this.state.username}
                                 onChange={this.onChangeUsername}>
@@ -108,6 +109,7 @@ export default class CreateExercises extends Component{
                         <label>Description</label>
                         <input type="text"
                                required
+                               id="description"
                                className="form-control"
                                value={this.state.description}
                                onChange={this.onChangeDescription}
@@ -116,6 +118,7 @@ export default class CreateExercises extends Component{
                     <div className="form-group">
                         <label>Duration (in minutes): </label>
                         <input type="text"
+                               id="time"
                                className="form-control"
                                value={this.state.duration}
                                onChange={this.onChangeDuration}
@@ -125,8 +128,9 @@ export default class CreateExercises extends Component{
                         <label>Date: </label>
                         <div>
                             <DatePicker
-                            selected={this.state.date}
-                            onChange={this.onChangeDate}
+                                id="date"
+                                selected={this.state.date}
+                                onChange={this.onChangeDate}
                             />
                         </div>
                     </div>
